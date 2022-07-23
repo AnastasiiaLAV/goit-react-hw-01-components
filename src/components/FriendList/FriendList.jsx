@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const FriendList = ({ friends }) => (
-
     <FriendListUl className="friend-list">
         {friends.map(friend => 
             <FriendsItem className="item" key={friend.id}>
@@ -16,8 +15,6 @@ const FriendList = ({ friends }) => (
 );
 
 export default FriendList;
-
-
 FriendList.prototype = {
     friends: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
