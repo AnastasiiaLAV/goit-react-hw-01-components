@@ -43,7 +43,7 @@ img {
   max-width: 100%;
 }
 
-button.is-hidden {
+.is-hidden {
   display: none;
 }
 
