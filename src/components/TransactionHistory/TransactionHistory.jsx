@@ -63,7 +63,7 @@ const Th = styled.th`
 `
 
 const Tbody = styled.tbody`
-background-color: rgb(212, 213, 233)
+background-color: rgb(212, 213, 233);
   box-shadow: -10px 0px 13px -7px #272837, 10px 0px 13px -7px #272837, 8px -8px 15px -16px rgba(0,0,0,0);
 `
 
