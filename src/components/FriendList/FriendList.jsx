@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const FriendList = ({friends}) => (
+const FriendList = ({ friends }) => (
+
     <FriendListUl className="friend-list">
         {friends.map(friend => 
             <FriendsItem className="item" key={friend.id}>
-                <SpanStatus className="status" style={{ backgroundColor: friend.isOnline ? 'green' : 'red' }}>{friend.isOnline ? 'on-line' : 'off-line'}</SpanStatus>
+                <SpanStatus className="status" isOnline={friend.isOnline} >{friend.isOnline ? 'on-line' : 'off-line'}</SpanStatus>
                 <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
                 <Name className="name">{friend.name}</Name>
             </FriendsItem>
@@ -48,6 +49,7 @@ const FriendsItem = styled.li`
 `
 
 const SpanStatus = styled.span`
+    background-color: ${({ isOnline }) => (isOnline ? "green" : "red")};
     font-size: 8px;
     margin: 10px;
     padding: 2px;
