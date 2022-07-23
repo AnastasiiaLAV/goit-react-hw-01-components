@@ -24,11 +24,7 @@ const Statistics = ({ title="", stats }) => (
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf({
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.number, 
-  }),
+  stats: PropTypes.array,
 }
 export default Statistics;
 
@@ -36,7 +32,7 @@ const SectionStats = styled.section`
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: 18px;
 max-width:800px;
-background: rgb(207 209 245);
+background: rgb(206 209 245);
 margin: 10px auto;
 padding: 15px;
 border-radius: 10px;
@@ -53,7 +49,7 @@ const StatList = styled.ul`
   justify-content: center;
   background-color: rgb(212, 213, 233);
   border-radius: 5px;
-  box-shadow: -10px 0px 13px -7px #1b1c25, 10px 0px 13px -7px #1b1c25, 8px -8px 15px -16px rgba(0,0,0,0);
+  box-shadow: -10px 0px 13px -7px #21222c, 10px 0px 13px -7px #20222c, 8px -8px 15px -16px rgba(0,0,0,0);
 `
 
 const StatItem = styled.li`
@@ -64,7 +60,7 @@ const StatItem = styled.li`
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: -10px 0px 13px -7px #1b1c25, 10px 0px 13px -7px #1b1c25, 8px -8px 15px -16px rgba(0,0,0,0);
+  box-shadow: -10px 0px 13px -7px #272837, 10px 0px 13px -7px #272837, 8px -8px 15px -16px rgba(0,0,0,0);
 `
 
 const Span = styled.span`
