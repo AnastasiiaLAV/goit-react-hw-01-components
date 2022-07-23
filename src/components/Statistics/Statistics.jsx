@@ -14,7 +14,7 @@ const Statistics = ({ title="", stats }) => (
       <StatList className="stat-list">
         {stats.map(stat => (
             <StatItem key={stat.id} style={{ backgroundColor: getRandomHexColor() }}>
-                <Span className="label">💿{stat.label}</Span>
+                <Span className="label">{stat.label}</Span>
                 <Span className="percentage">{stat.percentage}%</Span>
             </StatItem>
         ))}
