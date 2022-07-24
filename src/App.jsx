@@ -1,8 +1,8 @@
 import React from "react";
-import user from './user.json';
-import data from './data.json';
-import friends from './friends.json';
-import transactions from './transactions.json';
+import user from './data-json/user.json';
+import data from './data-json/data.json';
+import friends from './data-json/friends.json';
+import transactions from './data-json/transactions.json';
 
 import Profile from "./components/Profile/Profile";
 import Statistics from "./components/Statistics/Statistics";
@@ -21,6 +21,7 @@ function App() {
     avatar={user.avatar}
     stats={user.stats}
     />
+      <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions}/>
@@ -31,3 +32,4 @@ function App() {
 }
 
 export default App;
+

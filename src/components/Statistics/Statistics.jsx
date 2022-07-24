@@ -9,8 +9,9 @@ function getRandomHexColor() {
 }
 
 const Statistics = ({ title="", stats }) => (
-    <SectionStats className="statistics">
-      <Title className="title">{title}</Title>
+  <SectionStats className="statistics">
+    {title ? <Title className="title">{title}</Title> : ""}
+      {/* <Title className="title">{title}</Title> */}
       <StatList className="stat-list">
         {stats.map(stat => (
             <StatItem key={stat.id} style={{ backgroundColor: getRandomHexColor() }}>
@@ -24,7 +25,11 @@ const Statistics = ({ title="", stats }) => (
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array,
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage:PropTypes.number.isRequired,
+  })),
 }
 export default Statistics;
 
@@ -40,7 +45,10 @@ box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 8px -8px 15
 `
 
 const Title = styled.h2`
-  display: none;
+text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 4px 1px 5px #090180aa;
 `
 
 const StatList = styled.ul`
